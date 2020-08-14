@@ -1,0 +1,57 @@
+{
+    "name": "EricGerbers/ark-php-crypto",
+    "description": "A simple PHP Cryptography Implementation for the Ark Blockchain. Just make small change, change byte-bufer from 'faustbrian/byte-buffer' to 'trafficcophp/bytebuffer' because when I work then package 'faustbrian/byte-buffer' not found .",
+    "keywords": [
+        "api",
+        "ark",
+        "blockchain",
+        "crypto",
+        "currency"
+    ], 
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@brianfaust.me",
+            "homepage": "https://github.com/faustbrian"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "bitwasp/bitcoin": "^1.0.4",
+        "trafficcophp/bytebuffer": "^0.3",
+        "kodekeep/binary": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "illuminate/support": "^7.0.0",
+        "mockery/mockery": "^1.2",
+        "phpunit/phpunit": "^9.0.0",
+        "spatie/phpunit-watcher": "^1.8",
+        "symfony/var-dumper": "^5.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ArkEcosystem\\Crypto\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ArkEcosystem\\Tests\\Crypto\\": "tests"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "scripts": {
+        "test-watch": [
+            "vendor/bin/phpunit-watcher watch"
+        ]
+    }
+}
